@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: attendance-backend
+    env: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: DATABASE_URL
+        sync: false        # set in dashboard (Render Postgres/Neon/Supabase)
+      - key: SECRET_TOKEN
+        sync: false        # set to any long random string; also use in frontend header
+      - key: ALLOWED_ORIGINS
+        value: https://<your-username>.github.io
+      - key: THRESH
+        value: "0.5"
+      - key: COOLDOWN_MIN
+        value: "10"
+      - key: CAMERA_ID
+        value: EMI_GATE_WEB
