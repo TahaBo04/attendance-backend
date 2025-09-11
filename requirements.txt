@@ -2,6 +2,8 @@ fastapi
 uvicorn[standard]
 numpy
 pillow
+opencv-python
+mediapipe
+onnxruntime
 psycopg[binary]
 python-multipart
-face-recognition
